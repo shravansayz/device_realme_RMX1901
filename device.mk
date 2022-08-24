@@ -10,6 +10,7 @@ $(call inherit-product, build/make/target/product/product_launched_with_p.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/realme/RMX1901/RMX1901-vendor.mk)
