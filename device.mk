@@ -517,6 +517,12 @@ PRODUCT_BOOT_JARS += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0.vendor \
+    android.hardware.wifi@1.1.vendor \
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi@1.3.vendor \
+    android.hardware.wifi@1.4.vendor \
+    android.hardware.wifi@1.5.vendor \
     android.hardware.wifi-service \
     hostapd \
     libwifi-hal-ctrl \
