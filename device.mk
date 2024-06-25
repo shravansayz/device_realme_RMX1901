@@ -495,7 +495,6 @@ PRODUCT_PACKAGES += \
 
 # Update
 AB_OTA_UPDATER := false
-PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # USB
 PRODUCT_PACKAGES += \
