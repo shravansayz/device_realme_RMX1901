@@ -55,8 +55,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+
         vendor/lib64/hw/camera.qcom.so)
             grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
+
+        odm/lib64/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
     esac
 }
