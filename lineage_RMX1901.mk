@@ -26,13 +26,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Viper
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
-
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
-
-
 
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
