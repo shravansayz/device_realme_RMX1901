@@ -17,10 +17,9 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := true
 WITH_GMS := true
 TARGET_CORE_GMS := true
 
-# Maintainer Flag
-RISING_MAINTAINER := SHRAVAN
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_MAINTAINER="SHRAVAN"
+    RisingChipset="Snapdragon 710" \
+    RisingMaintainer="SHRAVAN"
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
