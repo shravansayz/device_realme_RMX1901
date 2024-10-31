@@ -17,6 +17,10 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := true
 WITH_GMS := true
 TARGET_CORE_GMS := true
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 710" \
+    RisingMaintainer="SHRAVAN"
+
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from RMX1901 device
