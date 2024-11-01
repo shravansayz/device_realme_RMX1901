@@ -14,8 +14,6 @@ TARGET_ENABLE_BLUR := true
 
 # RisingOS Flags
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
-WITH_GMS := true
-TARGET_CORE_GMS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Snapdragon 710" \
