@@ -30,16 +30,14 @@ PRODUCT_MANUFACTURER := realme
 PRODUCT_NAME := lineage_RMX1901
 PRODUCT_MODEL := Realme X
 
-PRODUCT_SYSTEM_NAME := RMX1901
-PRODUCT_SYSTEM_DEVICE := RMX1901
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc=$(call normalize-path-list, "RMX1901-user 11 RKQ1.201217.002 1626947099367 release-keys")
+    BuildDesc="RMX1901-user 11 RKQ1.201217.002 1626947099367 release-keys" \
+    BuildFingerprint=Realme/RMX1901/RMX1901:11/RKQ1.201217.002/1626947099367:user/release-keys
+    DeviceName=RMX1901 \
+    DeviceProduct=RMX1901 \
+    SystemDevice=RMX1901 \
+    SystemName=RMX1901
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Realme/RMX1901/RMX1901:11/RKQ1.201217.002/1626947099367:user/release-keys
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
