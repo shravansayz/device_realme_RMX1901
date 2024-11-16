@@ -21,8 +21,6 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 RELAX_USES_LIBRARY_CHECK := true
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
-#Scudo
-PRODUCT_USE_SCUDO := true
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -489,6 +487,7 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Thermal
+$(call soong_config_set,qti_thermal,netlink,false)
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
