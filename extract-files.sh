@@ -55,19 +55,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-
-        vendor/lib64/hw/camera.qcom.so)
-            grep -q libcamera_metadata_shim.so "${2}" || "${PATCHELF}" --add-needed libcamera_metadata_shim.so "${2}"
-
-        odm/lib64/libwvhidl.so)
-            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
-            ;;
-        vendor/etc/seccomp_policy/atfwd@2.0.policy)
-            echo 'gettid: 1' >> ${2}
+       odm/lib64/mediadrm/libwvdrmengine.so|odm/lib64/libwvhidl.so)
+       grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
     esac
 }
-
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
