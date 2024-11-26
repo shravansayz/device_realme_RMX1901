@@ -8,5 +8,4 @@
 
     <!-- Android version screen, build maintainer -->
     <string name="build_maintainer_summary" translatable="false">SHRAVAN</string>
-    <string name="build_maintainer_donate_url" translatable="false">https://www.paypal.me/ssksayz</string>
 </resources>
