@@ -4,14 +4,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Evolution X stuff
+# Inherit some common Crdroid stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USES_MINI_GAPPS:= true
-BUILD_SEEDVAULT := true
 TARGET_DISABLE_EPPE := true
+
+# Additional Gapps Flags:
+WITH_GMS := true
+
+PRODUCT_SYSTEM_PROPERTIES += \
+     ro.crdroid.maintainer=SHRAVAN
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
