@@ -34,7 +34,15 @@ LOCAL_OVERRIDES_PACKAGES := \
 		AndroidAutoStubPrebuilt \
 		AndroidAutoStub \
 		Auxio \
-		Papers
+		Papers \
+                GoogleTTS \
+                PixelWallpapers2024 \
+                ScribePrebuilt_v7.0.633113815 \
+                WellbeingPrebuilt \
+                FilesPrebuilt \
+                LocationHistoryPrebuilt \
+                SwitchAccessPrebuilt_1.15.0.629986523 \
+                arcore-1.42
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
