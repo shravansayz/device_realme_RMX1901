@@ -510,7 +510,7 @@ PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V3-cpp \
+    android.media.audio.common.types-V2-cpp \
     libgui_shim \
     libinput_shim \
     libnl \
