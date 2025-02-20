@@ -10,7 +10,7 @@ TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_DISABLE_EPPE := true
-
+PIXELAGE_MAINTAINER := Shravan
 $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 # Inherit from RMX1901 device
