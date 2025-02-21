@@ -11,13 +11,14 @@ TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
+TARGET_DISABLE_EPPE := true
 
-# RisingOS Flags
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Snapdragon 710" \
-    RisingMaintainer="SHRAVAN"
+# AXION FLAGS
+AXION_MAINTAINER := SHRAVAN
+AXION_PROCESSOR := Snapdragon_710
+AXION_CAMERA_REAR_INFO := 48,5
+AXION_CAMERA_FRONT_INFO := 16
+AXION_BUILD_VARIANT := GMS
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
