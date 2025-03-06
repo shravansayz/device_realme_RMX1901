@@ -1,48 +1,49 @@
 # Oppo display
-genfscon sysfs /kernel/oppo_display      u:object_r:sysfs_oppo_display:s0
+genfscon sysfs /kernel/oppo_display u:object_r:sysfs_oppo_display:s0
 genfscon sysfs /devices/pnp0/00:00/rtc u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/GFSH0007:00/rtc u:object_r:sysfs_rtc:s0
 
-genfscon proc /sys/vm/dirty_writeback_centisecs     u:object_r:proc_dirty:s0
-genfscon proc /sys/vm/vfs_cache_pressure            u:object_r:proc_drop_caches:s0
+# VM settings
+genfscon proc /sys/vm/dirty_writeback_centisecs u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/vfs_cache_pressure u:object_r:proc_drop_caches:s0
 
 # Touchpanel
-genfscon proc /touchpanel              u:object_r:proc_touchpanel:s0
+genfscon proc /touchpanel u:object_r:proc_touchpanel:s0
 
 # Oppo Project Version
-genfscon proc /oppoVersion                      u:object_r:proc_oppoversion:s0
+genfscon proc /oppoVersion u:object_r:proc_oppoversion:s0
 
 # Oppo FP
-genfscon proc /fp_id                     u:object_r:proc_oppo_fp:s0
+genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
 
 # RTC
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc/rtc0/hctosys        u:object_r:sysfs_rtc:s0
-genfscon sysfs /sys/class/rtc/rtc0/hctosys        u:object_r:sysfs_rtc:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc/rtc0/hctosys u:object_r:sysfs_rtc:s0
+genfscon sysfs /sys/class/rtc/rtc0/hctosys u:object_r:sysfs_rtc:s0
 
 # Power supply
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/ac   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/ac u:object_r:sysfs_batteryinfo:s0
 
 # Devinfo
-genfscon proc /devinfo        u:object_r:proc_devinfo:s0
+genfscon proc /devinfo u:object_r:proc_devinfo:s0
 
 # FPS info
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps        u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:sysfs_graphics:s0
 
-# Power Hal
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_encoder_mask                        u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state                               u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_timeout_ms                          u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display                                           u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/soc/62400000.qcom,lpass/subsys[0-9]/restart_level        u:object_r:sysfs_restart:s0
-genfscon sysfs /bus/msm_subsys/devices/subsys[0-9]/restart_level        u:object_r:sysfs_restart:s0
+# Power HAL
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_encoder_mask u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_state u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/idle_timeout_ms u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/62400000.qcom,lpass/subsys[0-9]/restart_level u:object_r:sysfs_restart:s0
+genfscon sysfs /bus/msm_subsys/devices/subsys[0-9]/restart_level u:object_r:sysfs_restart:s0
 
-# Realmeparts
+# Realme parts
 genfscon sysfs /kernel/sound_control/headphone_gain u:object_r:sysfs_hgain:s0
 genfscon sysfs /kernel/sound_control/mic_gain u:object_r:sysfs_mgain:s0
 
 # Wakelock stats
-genfscon proc /wakelocks                              u:object_r:proc_wakelocks:s0
+genfscon proc /wakelocks u:object_r:proc_wakelocks:s0
 
 # Extcon
-genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/extcon/extcon3/cable.0/     u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/extcon/extcon3/cable.1/     u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/extcon/extcon3/cable.0/ u:object_r:sysfs_extcon:s0
+genfscon sysfs /devices/platform/vendor/vendor:extcon_usb1/extcon/extcon3/cable.1/ u:object_r:sysfs_extcon:s0
