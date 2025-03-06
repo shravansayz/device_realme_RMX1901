@@ -18,7 +18,7 @@ AXION_MAINTAINER := SHRAVAN
 AXION_PROCESSOR := Snapdragon_710
 AXION_CAMERA_REAR_INFO := 48,5
 AXION_CAMERA_FRONT_INFO := 16
-AXION_BUILD_VARIANT := GMS
+WITH_GMS := true
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
