@@ -8,14 +8,10 @@
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_HAS_UDFPS := true
-TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GMS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
 TARGET_DISABLE_EPPE := true
-
-ORION_MAINTAINER := SHRAVAN
-ORION_GAPPS := true
-ORION_BUILD_TYPE := Unofficial
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -25,7 +21,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := realme
-PRODUCT_NAME := orion_RMX1901
+PRODUCT_NAME := lineage_RMX1901
 PRODUCT_MODEL := Realme X
 
 
